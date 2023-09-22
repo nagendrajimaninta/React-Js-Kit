@@ -30,11 +30,11 @@ function Board({ xIsNext, squares, onPlay }) {
   if (winner) {
     status = 'Winner: ' + winner;
   } else {
-    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+    status = 'Starting Player: ' + (xIsNext ? 'X' : 'O');
   }
 
   return (
-    <>
+    <div className='main'>
       <div className="App">{status}</div>
       <div className="padding">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -51,7 +51,7 @@ function Board({ xIsNext, squares, onPlay }) {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </>
+    </div>
   );
 }
 
@@ -77,7 +77,7 @@ function App() {
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button className='refresh' onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });

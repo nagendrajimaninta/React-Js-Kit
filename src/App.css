@@ -1,6 +1,14 @@
 .App {
   text-align: center;
-  margin-top: 100px
+  margin-top: 200px;
+  margin-left: 400px;
+  /*  background-color: red; */
+}
+
+.main {
+  background-color: rgb(181, 207, 181);
+  height: fit-content;
+  width: fit-content;
 }
 
 
@@ -12,13 +20,24 @@
   background-color: #cfc055;
   color: #090808;
   border: 2px solid #1f5628;
+  border-radius: 5px
+}
+
+.square:hover {
   border-radius: 15px
 }
 
 .padding {
-  padding: 2px;
+  padding: 1px;
+
 }
 
+.refresh {
+  background-color: #958c3e;
+}
+.refresh:hover {
+  background-color: red;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
